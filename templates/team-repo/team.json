@@ -1,0 +1,29 @@
+{
+  "factory_version": "1.0.0",
+  "kit_version": "<<KIT_VERSION>>",
+  "release_date": "<<RELEASE_DATE>>",
+  "team_name": "<<TEAM_NAME>>",
+  "team_slug": "<<TEAM_SLUG>>",
+  "team_purpose": "<<TEAM_PURPOSE>>",
+  "vault_name": "<<VAULT_NAME>>",
+  "vault_folder": "<<VAULT_FOLDER>>",
+  "output_unit": "<<OUTPUT_UNIT>>",
+  "output_unit_plural": "<<OUTPUT_UNIT_PLURAL>>",
+  "routine_name": "<<ROUTINE_NAME>>",
+  "platforms": ["grokbot", "hermes"],
+  "lead": {"name": "<<LEAD_NAME>>", "short": "<<LEAD_SHORT>>", "file": "<<LEAD_FILE>>.md"},
+  "qa": {"name": "QA Agent", "file": "qa-agent.md"},
+  "specialists": [],
+  "brain_files": [
+    {"file": "company.md", "title": "Company", "core": true, "sections": ["What we sell", "Who we serve", "How we make money", "What we believe", "What makes us different", "Key facts"]},
+    {"file": "voice.md", "title": "Voice", "core": true, "sections": ["How we sound", "How we never sound", "Phrases we use", "Banned words and phrases", "Formatting habits", "Spoken voice", "Written voice", "Good examples", "Bad examples", "Rules learned from edits"]},
+    {"file": "plan.md", "title": "Plan", "core": true, "sections": ["Goal", "Outputs and quantities", "Rhythm", "Delivery", "Authority", "Team and handoff", "Areas to avoid"]}
+  ],
+  "banks": [],
+  "schedules": [
+    {"name": "routine-send", "default_time": "Day before delivery day, 10:00", "does": "Sends the routine questions"},
+    {"name": "routine-reminder", "default_time": "Delivery day, 09:00", "does": "Only if no answers yet: 1 reminder + the bank option"},
+    {"name": "feedback-check", "default_time": "3 days after delivery day, 10:00", "does": "Asks for edits and winners"},
+    {"name": "monthly-review", "default_time": "First delivery day of each month, after the delivery", "does": "Runs the monthly review"}
+  ]
+}

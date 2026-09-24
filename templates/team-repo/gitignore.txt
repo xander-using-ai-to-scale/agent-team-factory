@@ -1,0 +1,10 @@
+# Obsidian app settings (created when someone opens the vault in Obsidian)
+.obsidian/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
