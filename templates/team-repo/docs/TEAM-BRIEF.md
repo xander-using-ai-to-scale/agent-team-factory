@@ -145,7 +145,7 @@ Grokbot, Hermes, or both (v1 builds both), plus known platform limits.
 <!-- FILL: one numbered item per gap (rule 3): every field that is empty, or inferred with an answer that would change the design if wrong, and every conflict between two sources. Order: most design-critical first (Purpose, Outputs, Roles, Authority, then Inputs and Constraints). Ask them in at most 2 rounds of at most 5 questions per message, written with process/03-question-design.md ("Intake questions"): one decision per question, a recommended default first marked "(recommended)", plus 1 to 3 alternatives, so the requester can reply "go" or "2: B". Format per item, on 2 lines:
 1. Q: the question as sent · Field: the field number and name · Round: 1 or 2 · Sent: YYYY-MM-DD
    A: the requester's answer, verbatim · Answered: YYYY-MM-DD
-Still open after round 2: "A: none · default used: the recommended default", and mark that field default. No gaps: write "None. Every field is confirmed." Source: the Confidence rows above and the requester's replies in the build chat. Length: 1 item per gap, max 10 items. Example: none in the content kit; process/01-intake.md, Step 6, gives the message rules. -->
+Still open after round 2: "A: none · default used: the recommended default", and mark that field default. No gaps: write "None. No field is a gap." Source: the Confidence rows above and the requester's replies in the build chat. Length: 1 item per gap, max 10 items. Example: none in the content kit; process/01-intake.md, Step 6, gives the message rules. -->
 
 ## Context not used
 

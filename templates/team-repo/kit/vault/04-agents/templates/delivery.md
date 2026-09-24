@@ -25,7 +25,7 @@ kit_version: <<KIT_VERSION>>
 
 ```markdown
 # Your <<OUTPUT_UNIT>> · {{delivery_day}} · {{title}}
-Built from: company v{{n}} · voice v{{n}} · plan v{{n}} · {{each domain brain file as name v{{n}}}} · QA: {{all passed | {{n}} passed, {{n}} held back}}
+Built from: company v{{n}} · voice v{{n}} · plan v{{n}} · <!-- FILL: each domain brain file as "<name> v{{n}}" joined with " · ", or delete this comment and the " · " before it when there are none. Source: team.json brain_files (core: false). Example: kit/The-Almanac/04-agents/templates/pack.md, the Built from line. --> · QA: {{all passed | {{n}} passed, {{n}} held back}}
 
 ## This <<OUTPUT_UNIT>> in 30 seconds
 - Core idea: {{the core idea in 1 line}}

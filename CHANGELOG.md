@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1 · 2026-09-25
+
+End-to-end test: a small SEO team was built with the factory and passed its checker (0 errors, 0 warnings). Fixes from that test:
+
+- Scaffold: picks "a" or "an" before names, writes "The Ledger" instead of "your The Ledger", "1 specialist" and "1 row" in the singular, fills tokens in TEAM-BRIEF and TEAM-SPEC, and writes every Hermes skill automatically.
+- Checker: validates Hermes skill names and descriptions (60-character limit) and bans words Hermes flags in team slugs.
+- Build process: fill TEAM-SPEC and the START-HERE routing table before starting helper agents.
+- Templates: a Notes column on plan.md outputs, rule 10 allows named fallbacks, clearer pushback-round targets, excerpts allowed for long example outputs, and smaller wording fixes.
+
 ## 1.0.0 · 2026-09-25
 
 First release.

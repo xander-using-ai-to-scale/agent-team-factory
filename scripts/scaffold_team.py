@@ -108,6 +108,22 @@ def fix_articles(text: str, values: dict[str, str]) -> str:
     return ARTICLE_BEFORE_TOKEN.sub(repl, text)
 
 
+YOUR_VAULT = re.compile(r"\b([Yy])our (?=" + "<" + "<VAULT_NAME>" + ">)")
+
+
+def fix_wording(text: str, values: dict[str, str]) -> str:
+    """Before tokens are replaced: "your The Ledger" becomes "The Ledger"."""
+    if values.get("VAULT_NAME", "").startswith("The "):
+        text = YOUR_VAULT.sub("", text)
+    return text
+
+
+def fix_counts(text: str) -> str:
+    """After tokens are replaced: "1 specialists" becomes "1 specialist"."""
+    text = re.sub(r"\b1 specialists\b", "1 specialist", text)
+    return re.sub(r"\b1 rows\b", "1 row", text)
+
+
 def stem(file_name: str) -> str:
     return file_name[:-3] if file_name.endswith(".md") else file_name
 
@@ -201,8 +217,8 @@ def main() -> int:
                 for name in TOKEN.findall(text):
                     if name not in values:
                         unknown.add(f"{rel}: {name}")
-                text = fix_articles(text, values)
-                text = TOKEN.sub(lambda m: values.get(m.group(1), m.group(0)), text)
+                text = fix_articles(fix_wording(text, values), values)
+                text = fix_counts(TOKEN.sub(lambda m: values.get(m.group(1), m.group(0)), text))
                 if rel == SKILL_TEMPLATE and dest_rel in skills:
                     text, done = fill_skill(text, team, *skills[dest_rel])
                     skill_notes.append(f"{dest_rel}: {'filled' if done else 'left for the builder (template shape changed)'}")

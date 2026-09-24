@@ -42,7 +42,7 @@ Example (fictional). Good: "Summary | Summary Agent | yes | 1 summary of 300–5
 
 | Output | Agent | Active | Quantity per <<OUTPUT_UNIT>> | Notes |
 |---|---|---|---|---|
-<!-- FILL: one row per specialist, in team.json order: | <output in plain words> | <specialist name> | {{yes/no}}, or "on demand" when on_demand_only is true | <the default quantity and its core size, for example "1 article of 900–1,400 words"> | <default options for this output as {{placeholders}} the client confirms, for example "Checklist version: {{no}}", or none> |. Source: team.json specialists (name, output_file, on_demand_only); TEAM-SPEC outputs and default quantities. Length: 1 row per specialist. Example: kit/The-Almanac/01-brain/strategy.md ## Platforms and quantities (rows, the Notes column, and the "on demand" VSL row). -->
+<!-- FILL: one row per specialist, in team.json order: | <output in plain words> | <specialist name> | {{yes}} or {{no}} (the blueprint's default, which the client confirms), or "on demand" when on_demand_only is true | <the default quantity and its core size, for example "1 article of 900–1,400 words"> | <default options for this output as {{placeholders}} the client confirms, for example "Checklist version: {{no}}", or none> |. Source: team.json specialists (name, output_file, on_demand_only); TEAM-SPEC outputs and default quantities. Length: 1 row per specialist. Example: kit/The-Almanac/01-brain/strategy.md ## Platforms and quantities (rows, the Notes column, and the "on demand" VSL row). -->
 
 This table is the only on/off switch for outputs.
 

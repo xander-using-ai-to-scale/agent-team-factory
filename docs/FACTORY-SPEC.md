@@ -1,4 +1,4 @@
-# FACTORY-SPEC: Agent Team Factory v1.0.0
+# FACTORY-SPEC: Agent Team Factory v1.0.1
 
 The build contract for the factory and for every team kit it builds. If a process file, a template, or a script disagrees with this spec, this spec wins. Change this file first, then everything else.
 

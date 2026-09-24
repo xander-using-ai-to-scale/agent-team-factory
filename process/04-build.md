@@ -85,7 +85,7 @@ The reference kit needed three alignment passes because the same fact drifted be
 
 ## Step 5 · Using helper agents (optional, faster)
 
-Split the FILLs into groups that do not share files, for example: (A) brain files and banks, (B) specialist and QA charters, (C) workflows and templates, (D) START-HERE and READMEs, (E) installs, skills, and docs. Group D and E read the others' output, so run them last or give them the final team.json and TEAM-SPEC as their source.
+Split the FILLs into groups that do not share files, for example: (A) brain files and banks, (B) specialist and QA charters, (C) workflows and templates, (D) START-HERE and READMEs, (E) installs, skills, and docs. Before any helper starts, fill `docs/TEAM-SPEC.md` and the routing table in `00-START-HERE.md` §4 yourself: every other file copies values from them (routing rows, question IDs, output headings, bank fields). Group D and E read the others' output, so run them last.
 
 Give every helper this brief, filled in:
 
